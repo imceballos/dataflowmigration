@@ -1,0 +1,4 @@
+apache-beam==2.41.0
+apache-beam[gcp]
+fhirclient==4.1.0
+google-auth==2.12.0
