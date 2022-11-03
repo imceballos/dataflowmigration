@@ -11,6 +11,6 @@ class SplitWords(beam.DoFn):
 
 with beam.Pipeline() as pipeline:
     header = (pipeline
-        | 'Read' >> beam.io.ReadFromText('inputexample.txt', skip_header_lines=5)
+        | 'Read' >> beam.io.ReadFromText('test_files/inputexample.txt', skip_header_lines=5)
         | 'ConvertToDict' >> beam.ParDo(SplitWords())
         | 'Print' >> beam.Map(print))
